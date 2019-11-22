@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("/reset.scss");
+
+$color__1: #FFFFFF;
+$color__2: #E0E0E0;
+$color__3: #626262;
+$color__4: #757575;
+$color__5: #1D1D1D;
+$color__6: #262626;
+$font__1: 500 13px/15px "Roboto" sans-serif;
+$font__2: normal 16px/24px "Roboto" sans-serif;
+$font__3: normal 14px/21px "Roboto" sans-serif;
+$font__4: normal 13px/21px "Roboto" sans-serif;
+
+body {
+  background: $color__1;
+}
+
+.header {
+  padding: 5px 80px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: flex-start;
+    width: 120px;
+    height: 14px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+
+  .button {
+    &__autorize {
+      font: $font__1;
+      font-style: bold;
+      border: 1px solid $color__2;
+      box-sizing: border-box;
+      border-radius: 2px;
+      background: $color__1;
+      padding: 14px 20px;
+      margin-right: 20px;
+      }
+
+      &__basket {
+      border: none;
+      background: $color__1;
+      padding: 0 0;
+    }
+  }
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  padding: 30px 5%;
+  border: none;
+
+  &__input {
+    width: 100%;
+    height: 48px;
+    padding-left: 0;
+    padding-bottom: 0;
+    border: none;
+    border-bottom: 1px solid $color__4;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 10px;
+
+    &::placeholder {
+      color: $color__3;
+      padding-bottom: 0;
+    }
+}
+}
+
+.menu {
+  &__title {
+    font: $font__1;
+    font-size: 22px;
+    line-height: 34px;
+    padding-left: 5%;
+    padding-bottom: 16px;
+  }
+}
+
+.foodCard {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10%;
+
+
+
+  &__title {
+    font: $font__2;
+    color: $color__5
+  }
+
+  &__description {
+    font: $font__3;
+    color: $color__3;
+  }
+
+  &__delivery {
+    font: $font__4;
+    color: $color__5;
+  }
+}
