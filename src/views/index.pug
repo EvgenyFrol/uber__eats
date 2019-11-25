@@ -1,61 +1,6 @@
+include data.pug
+
 doctype html
-- var imageList = ['"/images/food-1.png"',
--                   '"/images/food-2.png"' ,
--                   '"/images/food-3.png"',
--                   '"/images/food-4.png"',
--                   '"/images/food-5.png"',
--                   '"/images/food-6.png"' ,
--                   '"/images/food-7.png"',
--                   '"/images/food-8.png"',
--                    '"/images/food-9.png"']
-
- ul 
-  each image in imageList
-    li= image
-  
-- var titleList = ['Макдоналдс — газетный',
--                    'DimSum & Co - ЦДМ',
--                    'ДвижОК — Манежная',
--                    'НЯ — NHA',
--                    'Точка Дзы — Цветной', 
--                    'Cinnabon', 
--                    'PIZZELOVE', 
--                    'Zю кафе — Тверская', 
--                    'Bar BQ Cafe — Манежная']
-
-  ul
-    each titleName in titleList
-      li= titleName
-
-- var descriptionList = ['₽₽ • Бургеры', 
--                          '₽ • Японская • Китайская • Азиатская', 
--                          '₽ • Американская • Европейская',
--                          '₽₽ • Вьетнамская',
--                          '₽₽ • Вьетнамская',
--                          '₽ • Выпечка • Десерты • Капкейки',
--                          '₽₽ • Пицца',
--                          '₽₽ • Японская',
--                          '₽₽₽ • Европейская']
-
-  ul
-    each description in descriptionList
-      li= description
-                        
-- var deliveryList = ['25 - 35 Min', 
--                      '40 - 50 Min',
--                      '35 - 45 Min',
--                     '30 - 40 Min', 
--                      '40 - 50 Min',
--                      '25 - 35 Min',
--                      '15 - 25 Min',
--                      '25 - 35 Min',
--                      '30 - 40 Min']
-
-  ul
-    each delivery in deliveryList
-      li= delivery
-
-
 html
   head
     meta(charset="utf-8")
@@ -72,79 +17,60 @@ html
             img(src="/images/basket.png")
 
     section.search
-      input.search__input(type="text" placeholder="Поиск по ресторанам и кухням" alt="input__search" name="searcher" )
+      .search__wrapper
+        input.search__input(type="text" placeholder="Поиск по ресторанам и кухням" alt="input__search" name="searcher" )
 
     section.menuFood
-      h1.menuFood__title.title Рестораны в Москве
+      .menuFood__wrapper
+        h1.menuFood__title.title Рестораны в Москве
+        .menuFood__foodCardContent
+          each item in foodCards
+            .menuFood__foodCardCenter
+              .menuFood__foodCard
+                figure
+                  img.menuFood__foodCardImage(src= item.image, alt= item.title)
+                  figcaption
+                    h2.menuFood__foodCardTitle= item.title
+                    p.menuFood__foodCardDescription= item.desc
+                    p.menuFood__foodCardDelivery= item.delivery
 
-    .menuFood__foodCardContent
-      .menuFood__foodCard
-        img.menuFood__foodCardImage(src=image alt="food image")
-        h2.menuFood__foodCardTitle(titleName)
-        p.menuFood__foodCardDescription(description)
-        p.menuFood__foodCardDelivery(delivery)
-
-      //- .foodCart__content
-      //-   .foodCard
-      //-     img.foodCard__image(src="/images/food-1.png" alt="food image")
-      //-     h2.foodCard__title Макдоналдс — газетный
-      //-     p.foodCard__description ₽₽ • Бургеры
-      //-     p.foodCard__delivery 25 - 35 Min
-
-      //-   .foodCard
-      //-     img.foodCard__image(src="/images/food-2.png" alt="food image")
-      //-     h2.foodCard__title DimSum & Co - ЦДМ
-      //-     p.foodCard__description ₽ • Японская • Китайская • Азиатская
-      //-     p.foodCard__delivery 40 - 50 Min
-
-      //-   .foodCard
-      //-     img.foodCard__image(src="/images/food-3.png" alt="food image")
-      //-     h2.foodCard__title ДвижОК — Манежная
-      //-     p.foodCard__description ₽ • Американская • Европейская
-      //-     p.foodCard__delivery 35 - 45 Min
-
-      //-   .foodCard
-      //-     img.foodCard__image(src="/images/food-4.png" alt="food image")
-      //-     h2.foodCard__title НЯ — NHA
-      //-     p.foodCard__description ₽₽ • Вьетнамская
-      //-     p.foodCard__delivery 30 - 40 Min
-
-      //-   .foodCard
-      //-     img.foodCard__image(src="/images/food-5.png" alt="food image")
-      //-     h2.foodCard__title Точка Дзы — Цветной
-      //-     p.foodCard__description ₽₽ • Вьетнамская
-      //-     p.foodCard__delivery 40 - 50 Min
-
-      //-   .foodCard
-      //-     img.foodCard__image(src="/images/food-6.png" alt="food image")
-      //-     h2.foodCard__title Cinnabon
-      //-     p.foodCard__description ₽ • Выпечка • Десерты • Капкейки
-      //-     p.foodCard__delivery 25 - 35 Min
-
-      //-   .foodCard
-      //-     img.foodCard__image(src="/images/food-7.png" alt="food image")
-      //-     h2.foodCard__title PIZZELOVE
-      //-     p.foodCard__description ₽₽ • Пицца
-      //-     p.foodCard__delivery 15 - 25 Min
-
-      //-   .foodCard
-      //-     img.foodCard__image(src="/images/food-8.png" alt="food image")
-      //-     h2.foodCard__title Zю кафе — Тверская
-      //-     p.foodCard__description ₽₽ • Японская
-      //-     p.foodCard__delivery 25 - 35 Min
-
-      //-   .foodCard
-      //-     img.foodCard__image(src="/images/food-9.png" alt="food image")
-      //-     h2.foodCard__title Bar BQ Cafe — Манежная
-      //-     p.foodCard__description ₽₽₽ • Европейская
-      //-     p.foodCard__delivery 30 - 40 Min
 
     footer.footer
-      img.footer__logo(src="/image/footer-logo.png" alt="footer__logo")
+      .footer__wrapper
+        .footer__logoImg
+          img.footer__logo(src="/images/footer-logo.png" alt="footer__logo")
 
-      .footer__menu
-        select.footer__menuLang
-          option Русский
-          option English
+        .footer__menu
+          .footer__socialLink
+            select.footer__selectLang
+              img.footer__selectLangWorld(src="/images/world.png" alt="world")
+              option.footer__selectText Русский
+              option.footer__selectText English
+            p.footer__selectLang--text #
+              span.footer__span UberEats
+            .footer__selectLangSocial
+              img.footer__selectLangSocialLink(src="/images/facebook.png" alt="facebook__logo")
+              img.footer__selectLangSocialLink(src="/images/twitter.png" alt="twitter__logo")
+              img.footer__selectLangSocialLink(src="/images/instagram.png" alt="instagram__logo")
 
-    
+          .footer__aboutUberEats
+            a.footer__aboutUberEatsLinks.footer__links(href="#") Об UberEats
+            a.footer__aboutUberEatsLinks.footer__links(href="#") Станьте партнёром по доставке
+            a.footer__aboutUberEatsLinks.footer__links(href="#") Станьте партнёром-рестораном
+
+          .footer__help
+            a.footer__helpLinks.footer__links(href="#") Все Города
+            a.footer__helpLinks.footer__links(href="#") Цены
+            a.footer__helpLinks.footer__links(href="#") Помощь
+            a.footer__helpLinks.footer__links(href="#") FAQs
+
+        .footer__app
+          button.footer__button.button__app(href="#")
+            img(src="/images/app__store.png")
+          button.footer__button.button__app(href="#")
+            img(src="/images/google__play.png")
+
+        .footer__footer
+            p.footer__footerText © 2017 Uber Technologies Inc.
+            p.footer__footerText Обработка персональных данных
+            p.footer__footerText Пользовательское соглашение

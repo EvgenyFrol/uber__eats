@@ -1,48 +1,5 @@
-<!DOCTYPE html>
-<ul> 
-  <li>&quot;/images/food-1.png&quot;</li>
-  <li>&quot;/images/food-2.png&quot;</li>
-  <li>&quot;/images/food-3.png&quot;</li>
-  <li>&quot;/images/food-4.png&quot;</li>
-  <li>&quot;/images/food-5.png&quot;</li>
-  <li>&quot;/images/food-6.png&quot;</li>
-  <li>&quot;/images/food-7.png&quot;</li>
-  <li>&quot;/images/food-8.png&quot;</li>
-  <li>&quot;/images/food-9.png&quot;</li>
-</ul>
-<ul>
-  <li>Макдоналдс — газетный</li>
-  <li>DimSum &amp; Co - ЦДМ</li>
-  <li>ДвижОК — Манежная</li>
-  <li>НЯ — NHA</li>
-  <li>Точка Дзы — Цветной</li>
-  <li>Cinnabon</li>
-  <li>PIZZELOVE</li>
-  <li>Zю кафе — Тверская</li>
-  <li>Bar BQ Cafe — Манежная</li>
-</ul>
-<ul>
-  <li>₽₽ • Бургеры</li>
-  <li>₽ • Японская • Китайская • Азиатская</li>
-  <li>₽ • Американская • Европейская</li>
-  <li>₽₽ • Вьетнамская</li>
-  <li>₽₽ • Вьетнамская</li>
-  <li>₽ • Выпечка • Десерты • Капкейки</li>
-  <li>₽₽ • Пицца</li>
-  <li>₽₽ • Японская</li>
-  <li>₽₽₽ • Европейская</li>
-</ul>
-<ul>
-  <li>25 - 35 Min</li>
-  <li>40 - 50 Min</li>
-  <li>35 - 45 Min</li>
-  <li>30 - 40 Min</li>
-  <li>40 - 50 Min</li>
-  <li>25 - 35 Min</li>
-  <li>15 - 25 Min</li>
-  <li>25 - 35 Min</li>
-  <li>30 - 40 Min</li>
-</ul>
+
+<!--обьект с данными для блока с кратким описание блюд--><!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -58,24 +15,140 @@
       </div>
     </header>
     <section class="search">
-      <input class="search__input" type="text" placeholder="Поиск по ресторанам и кухням" alt="input__search" name="searcher">
+      <div class="search__wrapper">
+        <input class="search__input" type="text" placeholder="Поиск по ресторанам и кухням" alt="input__search" name="searcher">
+      </div>
     </section>
     <section class="menuFood">
-      <h1 class="menuFood__title title">Рестораны в Москве</h1>
-    </section>
-    <div class="menuFood__foodCardContent">
-      <div class="menuFood__foodCard"><img class="menuFood__foodCardImage" alt="food image">
-        <h2 class="menuFood__foodCardTitle" titleName></h2>
-        <p class="menuFood__foodCardDescription" description></p>
-        <p class="menuFood__foodCardDelivery" delivery></p>
+      <div class="menuFood__wrapper">
+        <h1 class="menuFood__title title">Рестораны в Москве</h1>
+        <div class="menuFood__foodCardContent">
+          <div class="menuFood__foodCardCenter">
+            <div class="menuFood__foodCard">
+              <figure><img class="menuFood__foodCardImage" src="/images/food-1.png" alt="Макдоналдс — газетный">
+                <figcaption>
+                  <h2 class="menuFood__foodCardTitle">Макдоналдс — газетный</h2>
+                  <p class="menuFood__foodCardDescription">₽₽ • Бургеры</p>
+                  <p class="menuFood__foodCardDelivery">25 - 35 мин</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="menuFood__foodCardCenter">
+            <div class="menuFood__foodCard">
+              <figure><img class="menuFood__foodCardImage" src="/images/food-2.png" alt="DimSum &amp; Co — ЦДМ">
+                <figcaption>
+                  <h2 class="menuFood__foodCardTitle">DimSum &amp; Co — ЦДМ</h2>
+                  <p class="menuFood__foodCardDescription">₽ • Японская • Китайская • Азиатская</p>
+                  <p class="menuFood__foodCardDelivery">40 - 50 мин</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="menuFood__foodCardCenter">
+            <div class="menuFood__foodCard">
+              <figure><img class="menuFood__foodCardImage" src="/images/food-3.png" alt="ДвижОК — Манежная">
+                <figcaption>
+                  <h2 class="menuFood__foodCardTitle">ДвижОК — Манежная</h2>
+                  <p class="menuFood__foodCardDescription">₽ • Американская • Европейская</p>
+                  <p class="menuFood__foodCardDelivery">35 - 45 мин</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="menuFood__foodCardCenter">
+            <div class="menuFood__foodCard">
+              <figure><img class="menuFood__foodCardImage" src="/images/food-4.png" alt="НЯ — NHA">
+                <figcaption>
+                  <h2 class="menuFood__foodCardTitle">НЯ — NHA</h2>
+                  <p class="menuFood__foodCardDescription">₽₽ • Вьетнамская</p>
+                  <p class="menuFood__foodCardDelivery">30 - 40 мин</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="menuFood__foodCardCenter">
+            <div class="menuFood__foodCard">
+              <figure><img class="menuFood__foodCardImage" src="/images/food-5.png" alt="Точка Дзы — Цветной">
+                <figcaption>
+                  <h2 class="menuFood__foodCardTitle">Точка Дзы — Цветной</h2>
+                  <p class="menuFood__foodCardDescription">₽₽ • Вьетнамская</p>
+                  <p class="menuFood__foodCardDelivery">40 - 50 мин</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="menuFood__foodCardCenter">
+            <div class="menuFood__foodCard">
+              <figure><img class="menuFood__foodCardImage" src="/images/food-6.png" alt="Cinnabon">
+                <figcaption>
+                  <h2 class="menuFood__foodCardTitle">Cinnabon</h2>
+                  <p class="menuFood__foodCardDescription">₽ • Выпечка • Десерты • Капкейки</p>
+                  <p class="menuFood__foodCardDelivery">25 - 35 мин</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="menuFood__foodCardCenter">
+            <div class="menuFood__foodCard">
+              <figure><img class="menuFood__foodCardImage" src="/images/food-7.png" alt="PIZZELOVE">
+                <figcaption>
+                  <h2 class="menuFood__foodCardTitle">PIZZELOVE</h2>
+                  <p class="menuFood__foodCardDescription">₽₽ • Пицца</p>
+                  <p class="menuFood__foodCardDelivery">15 - 25 мин</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="menuFood__foodCardCenter">
+            <div class="menuFood__foodCard">
+              <figure><img class="menuFood__foodCardImage" src="/images/food-8.png" alt="Zю кафе — Тверская">
+                <figcaption>
+                  <h2 class="menuFood__foodCardTitle">Zю кафе — Тверская</h2>
+                  <p class="menuFood__foodCardDescription">₽₽ • Японская</p>
+                  <p class="menuFood__foodCardDelivery">15 - 35 мин</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="menuFood__foodCardCenter">
+            <div class="menuFood__foodCard">
+              <figure><img class="menuFood__foodCardImage" src="/images/food-9.png" alt="Bar BQ Cafe — Манежная">
+                <figcaption>
+                  <h2 class="menuFood__foodCardTitle">Bar BQ Cafe — Манежная</h2>
+                  <p class="menuFood__foodCardDescription">₽₽₽ • Европейская</p>
+                  <p class="menuFood__foodCardDelivery">30 - 40 мин</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <footer class="footer"><img class="footer__logo" src="/image/footer-logo.png" alt="footer__logo">
-      <div class="footer__menu">
-        <select class="footer__menuLang">
-          <option>Русский</option>
-          <option>English</option>
-        </select>
+    </section>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__logoImg"><img class="footer__logo" src="/images/footer-logo.png" alt="footer__logo"></div>
+        <div class="footer__menu">
+          <div class="footer__socialLink">
+            <select class="footer__selectLang"><img class="footer__selectLangWorld" src="/images/world.png" alt="world">
+              <option class="footer__selectText">Русский</option>
+              <option class="footer__selectText">English</option>
+            </select>
+            <p class="footer__selectLang--text">#<span class="footer__span">UberEats</span></p>
+            <div class="footer__selectLangSocial"><img class="footer__selectLangSocialLink" src="/images/facebook.png" alt="facebook__logo"><img class="footer__selectLangSocialLink" src="/images/twitter.png" alt="twitter__logo"><img class="footer__selectLangSocialLink" src="/images/instagram.png" alt="instagram__logo"></div>
+          </div>
+          <div class="footer__aboutUberEats"><a class="footer__aboutUberEatsLinks footer__links" href="#">Об UberEats</a><a class="footer__aboutUberEatsLinks footer__links" href="#">Станьте партнёром по доставке</a><a class="footer__aboutUberEatsLinks footer__links" href="#">Станьте партнёром-рестораном</a></div>
+          <div class="footer__help"><a class="footer__helpLinks footer__links" href="#">Все Города</a><a class="footer__helpLinks footer__links" href="#">Цены</a><a class="footer__helpLinks footer__links" href="#">Помощь</a><a class="footer__helpLinks footer__links" href="#">FAQs</a></div>
+        </div>
+        <div class="footer__app">
+          <button class="footer__button button__app" href="#"><img src="/images/app__store.png"></button>
+          <button class="footer__button button__app" href="#"><img src="/images/google__play.png"></button>
+        </div>
+        <div class="footer__footer">
+          <p class="footer__footerText">© 2017 Uber Technologies Inc.</p>
+          <p class="footer__footerText">Обработка персональных данных</p>
+          <p class="footer__footerText">Пользовательское соглашение</p>
+        </div>
       </div>
     </footer>
   <script type="text/javascript" src="./js/index.js"></script></body>
