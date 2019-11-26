@@ -13,6 +13,7 @@ $font__1: 500 13px/15px "Roboto" sans-serif;
 $font__2: normal 16px/24px "Roboto" sans-serif;
 $font__3: normal 14px/21px "Roboto" sans-serif;
 $font__4: normal 13px/21px "Roboto" sans-serif;
+$font__5: normal 11px/13px "Roboto" sans-serif;
 
 body {
   background: $color__1;
@@ -192,6 +193,9 @@ body {
   &__menu {
     display: flex;
     padding-top: 27px;
+    border: none;
+    border-bottom: 1px solid $color__4;
+    padding-bottom: 37px;
   }
 
   &__socialLink {
@@ -201,28 +205,52 @@ body {
 
   }
 
-  &__selectLang {
-    width: 227px;
-    height: 40px;
+  select {
     background: $color__7;
-    border-radius: 2px;
+    padding-left: 40px;
+  }
+
+
+  &__selectLang {
+    width: 200px;
+    height: 40px;
+    color: $color__1;
+    border: none;
+    padding-left: 40px;
+    background: url("/images/world.png") no-repeat 12px !important;
 
     &--text {
       font: $font__2;
       color: $color__8;
       padding-top: 32px;
+      padding-bottom: 14px;
     }
   }
+
+
 
   &__span {
     font: $font__2;
     color: $color__1;
   }
 
-  &__selectText {
-    font: $font__1;
-    color: $color__1;
+  option {
+    background-color: $color__7;
+    padding-right: 150px;
   }
+
+  &__selectText  {
+    font: $font__2;
+    color: $color__1;
+
+    &__selectText::value {
+      padding: 10px 0;
+    }
+  }
+
+  &__selectLangSocialLink:nth-child(2) {
+    padding: 0 15px;
+   }
 
   &__aboutUberEats {
     display: flex;
@@ -234,4 +262,36 @@ body {
     flex-direction: column; 
     padding-left: 128px;
   }
+
+
+&__app {
+  padding-top: 37px;
+  padding-left: 35.7%;
+  border: none;
+  border-bottom: 1px solid $color__4;
+  padding-bottom: 34px;
+}
+
+&__button {
+  padding: 0;
+  border: none;
+  background: transparent;
+
+}
+
+
+
+&__footer {
+  display: flex;
+    justify-content: space-around;
+    padding-top: 40px;
+    padding-bottom: 36px;
+    padding-left: 32px;
+}
+
+
+&__footerText {
+  font: $font__5;
+  color: $color__1;
+}
 }

@@ -43,9 +43,9 @@ html
         .footer__menu
           .footer__socialLink
             select.footer__selectLang
-              img.footer__selectLangWorld(src="/images/world.png" alt="world")
-              option.footer__selectText Русский
-              option.footer__selectText English
+              .footer__selectLangWorld
+              option.footer__selectText(value="1") Русский
+              option.footer__selectText(value="2") English
             p.footer__selectLang--text #
               span.footer__span UberEats
             .footer__selectLangSocial
@@ -59,7 +59,7 @@ html
             a.footer__aboutUberEatsLinks.footer__links(href="#") Станьте партнёром-рестораном
 
           .footer__help
-            a.footer__helpLinks.footer__links(href="#") Все Города
+            a.footer__helpLinks.footer__links(href="#") Все города
             a.footer__helpLinks.footer__links(href="#") Цены
             a.footer__helpLinks.footer__links(href="#") Помощь
             a.footer__helpLinks.footer__links(href="#") FAQs
