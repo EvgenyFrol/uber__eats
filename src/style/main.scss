@@ -9,6 +9,7 @@ $color__5: #1D1D1D;
 $color__6: #262626;
 $color__7: #3B3B3B;
 $color__8: #49A144;
+$color__9: #59BD5A;
 $font__1: 500 13px/15px "Roboto" sans-serif;
 $font__2: normal 16px/24px "Roboto" sans-serif;
 $font__3: normal 14px/21px "Roboto" sans-serif;
@@ -293,5 +294,19 @@ body {
 &__footerText {
   font: $font__5;
   color: $color__1;
+}
+
+&__footerButton {
+  padding-right: 16px;
+  padding-bottom: 24px;
+  width: 80px;
+  height: 80px;
+  background: $color__9;
+  border-radius: 2px;
+
+  img {
+    margin: 0 auto;
+
+  }
 }
 }
