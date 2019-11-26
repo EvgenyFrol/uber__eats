@@ -5,6 +5,8 @@ html
   head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width initial-scale=1")
+    script
+      include ../js/jquery-3.4.1.js
 
   body
     header.header
@@ -76,5 +78,6 @@ html
             p.footer__footerText Пользовательское соглашение
 
             button.footer__footerButton
-              script(src="../js/script.scrollUp.js")
+              script
+                include ../js/script.scrollUp.js
               img.footer__buttonImage(src="/images/button__up.png")
