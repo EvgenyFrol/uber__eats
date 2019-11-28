@@ -1,17 +1,16 @@
 import '../style/main.scss';
-import Tesst from './test';
 
 $(document).ready(function() {
 
   $(window).scroll(function() {
     if ($("body,html").scrollTop() > 100) {
-      $(".scrollToTopButton").fadeIn()
+      $(".scrollTo").fadeIn()
     } else {
-      $(".scrollToTopButton").fadeOut()
+      $(".scrollTo").fadeOut()
     }
   });
 
-  $(".scrollToTopButton").click(function() {
+  $(".scrollTo").click(function() {
     $("body,html").animate({scrollTop: 0}, 700)
   })
 })

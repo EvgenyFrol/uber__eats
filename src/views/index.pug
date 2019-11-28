@@ -1,4 +1,9 @@
 include data.pug
+include logo__link.pug
+include about.pug
+include help.pug
+include store.pug
+include footer.pug
 
 doctype html
 html
@@ -11,7 +16,8 @@ html
   body
     header.header
       .header__wrapper
-        img.header__logo(src="/images/logo.png" alt="Uber Eats Logo")
+        a(href="/")
+          img.header__logo(src="/images/logo.png" alt="Uber Eats Logo")
 
         .header__button
           button.header__button.button.button__autorize(href="#") Войти
@@ -36,7 +42,6 @@ html
                     p.menuFood__foodCardDescription= item.desc
                     p.menuFood__foodCardDelivery= item.delivery
 
-
     footer.footer
       .footer__wrapper
         .footer__logoImg
@@ -51,31 +56,27 @@ html
             p.footer__selectLang--text #
               span.footer__span UberEats
             .footer__selectLangSocial
-              img.footer__selectLangSocialLink(src="/images/facebook.png" alt="facebook__logo")
-              img.footer__selectLangSocialLink(src="/images/twitter.png" alt="twitter__logo")
-              img.footer__selectLangSocialLink(src="/images/instagram.png" alt="instagram__logo")
+              each item in logoLink
+                a(href= item.href target="_blank")
+                  img.footer__selectLangSocialLink(src= item.logo alt= item.alt)
 
           .footer__aboutUberEats
-            a.footer__aboutUberEatsLinks.footer__links(href="#") Об UberEats
-            a.footer__aboutUberEatsLinks.footer__links(href="#") Станьте партнёром по доставке
-            a.footer__aboutUberEatsLinks.footer__links(href="#") Станьте партнёром-рестораном
+            each item in dataAbout
+              a.footer__aboutUberEatsLinks.footer__links(href="#")= item.link
 
           .footer__help
-            a.footer__helpLinks.footer__links(href="#") Все города
-            a.footer__helpLinks.footer__links(href="#") Цены
-            a.footer__helpLinks.footer__links(href="#") Помощь
-            a.footer__helpLinks.footer__links(href="#") FAQs
+            each item in information
+              a.footer__helpLinks.footer__links(href="#")= item.inf
 
         .footer__app
-          button.footer__button.button__app(href="#")
-            img(src="/images/app__store.png")
-          button.footer__button.button__app(href="#")
-            img(src="/images/google__play.png")
+          each item in appStore
+            button.footer__button.button__app
+              a(href= item.link target="_blank")
+                img.app__logo(src= item.logo alt="app__logo")
 
         .footer__footer
-            p.footer__footerText © 2017 Uber Technologies Inc.
-            p.footer__footerText Обработка персональных данных
-            p.footer__footerText Пользовательское соглашение
+          each item in foot
+            p.footer__footerText= item.text
 
-    button.scrollToTopButton(href="#")
-      img.footer__buttonImage(src="/images/button__up.png")
+    button.scrollTo(href="#")
+      img.scrollToImage(src="/images/button__up.png")

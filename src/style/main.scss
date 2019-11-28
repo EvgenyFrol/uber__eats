@@ -1,12 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url("../style/reset.scss");
 
+$color__1: #FFFFFF;
+$color__2: #E0E0E0;
+$color__3: #626262;
+$color__4: #757575;
+$color__5: #1D1D1D;
+$color__6: #262626;
+$color__7: #3B3B3B;
+$color__8: #49A144;
+$color__9: #59BD5A;
+$color__10: #C0C0C0;
 
 $font__1: 500 13px/15px "Roboto" sans-serif;
 $font__2: normal 16px/24px "Roboto" sans-serif;
 $font__3: normal 14px/21px "Roboto" sans-serif;
 $font__4: normal 13px/21px "Roboto" sans-serif;
 $font__5: normal 11px/13px "Roboto" sans-serif;
+$font__6: bold 14px/15px "Roboto" sans-serif;
 
 body {
   background: $color__1;
@@ -48,13 +59,25 @@ body {
       background: $color__1;
       padding: 14px 20px;
       margin-right: 20px;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+        font: $font__6;
+        cursor: default;
       }
+    }
 
       &__basket {
       border: none;
       background: $color__1;
       padding-right: 15px;
-    }
+      }
+
+      &__basket:hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+      }
   }
 }
 
@@ -69,7 +92,6 @@ body {
     width: 90%;
     max-width: 1024px;
     padding: 34px 25px;
-
   }
 
   &__input {
@@ -83,15 +105,29 @@ body {
     padding-left: 10px;
     padding-top: 23px;
 
+    &:hover {
+      color: transparent;
+      transition: all 0.2s ease;
+    }
+
     &::placeholder {
       color: $color__3;
       margin: 0 0;
+
+      &:hover {
+        display: none;
+        transition: all 0.3s ease;
+      }
+
+      &:active {
+        color: transparent;
+      }
     }
   }
 }
 
 .menuFood {
-  padding-top: 21px;
+  padding-top: 25px;
   padding-bottom: 100px;
 
   &__wrapper {
@@ -105,6 +141,10 @@ body {
     font-size: 22px;
     line-height: 34px;
     padding-left: 3.2%;
+
+    @media (max-width: 1024px) {
+      text-align: center;
+    }
   }
 
   &__foodCardCenter {
@@ -116,39 +156,55 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
 
-    .menuFood__foodCard {
-      padding:15px 5px;
+  .menuFood__foodCard {
+    padding:20px 7px;
 
-      .menuFood__foodCardTitle {
-        font: $font__2;
-        color: $color__5;
-        padding-top: 13px;
-        padding-left: 5.5px;
-      }
-
-      .menuFood__foodCardImage {
-        padding: 0 3px;
-      }
-  
-      .menuFood__foodCardDescription {
-        font: $font__3;
-        color: $color__3;
-        margin: 0;
-        padding-top: 3px;
-        padding-left: 4px;
-      }
-  
-      .menuFood__foodCardDelivery {
-        font: $font__4;
-        color: $color__5;
-        padding-top: 3px;
-        padding-left: 4px;
-        padding-bottom: 7px;
-      }
+    &:hover {
+      transition: all 0.1s ease;
+      transform: scale(1.05);
+      background: $color__10;
+      border-radius: 5px;
+      transition: all 0.3s ease;
     }
   }
+
+  .menuFood__foodCardTitle {
+    font: $font__2;
+    color: $color__5;
+    padding-top: 13px;
+    padding-left: 5.5px;
+
+    &:hover {
+      text-decoration: underline;
+      transition: all 0.1s ease;
+      cursor: pointer;
+    }
+  }
+
+  .menuFood__foodCardImage {
+    padding: 0 3px;
+  }
+
+  .menuFood__foodCardDescription {
+    font: $font__3;
+    color: $color__3;
+    margin: 0;
+    padding-top: 3px;
+    padding-left: 4px;
+  }
+
+  .menuFood__foodCardDelivery {
+    font: $font__4;
+    color: $color__5;
+    padding-top: 3px;
+    padding-left: 4px;
+    padding-bottom: 7px;
+  }
 }
+
+
 
 .footer {
   background: $color__6;
@@ -156,28 +212,34 @@ body {
   border-bottom: 1px solid $color__1;
   width: 100%;
 
-  .footer__wrapper {
+  &__wrapper {
     margin: 0 auto;
     width: 100%;
     max-width: 1024px;
-
   }
 
-
-  .footer__logoImg {
+  &__logoImg {
     border: none;
     border-bottom: 1px solid $color__4;
     padding: 29px 0;
     padding-left: 33px;
     padding-bottom: 36px;
-
   }
 
-  .footer__links {
+  &__links {
     font: $font__1;
     color: $color__1;
     text-decoration: none;
     padding: 12px 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      padding-left: 0px;
+      font: $font__4;
+    }
   }
 
   &__menu {
@@ -186,6 +248,12 @@ body {
     border: none;
     border-bottom: 1px solid $color__4;
     padding-bottom: 37px;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__socialLink {
@@ -199,7 +267,6 @@ body {
     background: $color__7;
     padding-left: 40px;
   }
-
 
   &__selectLang {
     width: 200px;
@@ -215,9 +282,13 @@ body {
       padding-top: 32px;
       padding-bottom: 14px;
     }
+
+    option {
+      height: 40px;
+      padding: 20px;
+      display: block;
+    }
   }
-
-
 
   &__span {
     font: $font__2;
@@ -232,17 +303,8 @@ body {
   &__selectText  {
     font: $font__2;
     color: $color__1;
-    padding: 10px 0 !important;
-
-    // &__selectText::value {
-    //   padding: 10px 0;
-    // }
+    padding: 10px 0;
   }
-
-  &__selectLangSocialLink
-    &:nth-child(2) {
-      padding: 0 15px;
-    }
 
   &__aboutUberEats {
     display: flex;
@@ -253,55 +315,58 @@ body {
     display: flex;
     flex-direction: column; 
     padding-left: 128px;
+
   }
 
+  &__app {
+    padding-top: 37px;
+    padding-left: 35.7%;
+    border: none;
+    border-bottom: 1px solid $color__4;
+    padding-bottom: 34px;
+  }
 
-&__app {
-  padding-top: 37px;
-  padding-left: 35.7%;
-  border: none;
-  border-bottom: 1px solid $color__4;
-  padding-bottom: 34px;
+  &__button {
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    &:hover {
+      transform: scale(1.05);;
+      transition: all 0.4s ease;
+    }
+  }
+
+  &__footer {
+    display: flex;
+      justify-content: space-around;
+      padding-top: 40px;
+      padding-bottom: 36px;
+      padding-left: 32px;
+  }
+
+  &__footerText {
+    font: $font__5;
+    color: $color__1;
+  }
 }
 
-&__button {
-  padding: 0;
-  border: none;
-  background: transparent;
-
-}
-
-
-
-&__footer {
-  display: flex;
-    justify-content: space-around;
-    padding-top: 40px;
-    padding-bottom: 36px;
-    padding-left: 32px;
-}
-
-
-&__footerText {
-  font: $font__5;
-  color: $color__1;
-}
-
-}
-
-.scrollToTopButton {
+.scrollTo {
   padding-right: 16px;
   padding-bottom: 24px;
   width: 80px;
   height: 80px;
   background: $color__9;
-  border-radius: 2px;
+  border-radius: 10px;
+  border: none;
   position: fixed;
   bottom: 20px;
   right: 10px;
   text-align: center; 
+  opacity: 0.5;
 
-  img {
-    margin: 0 auto;
+  .scrollToImage {
+    padding: 26px 20px;
+    margin-left: 4px;
   }
 }
