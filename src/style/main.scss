@@ -10,7 +10,7 @@ $color__6: #262626;
 $color__7: #3B3B3B;
 $color__8: #49A144;
 $color__9: #59BD5A;
-$color__10: #C0C0C0;
+$color__10:#e3e1e1;
 
 $font__1: 500 13px/15px "Roboto" sans-serif;
 $font__2: normal 16px/24px "Roboto" sans-serif;
@@ -35,6 +35,10 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 13px 81px;
+
+    @media (max-width: 425px) {
+      flex-direction: column;
+    }
   }
 
   &__logo {
@@ -42,6 +46,12 @@ body {
     justify-content: flex-start;
     width: 120px;
     height: 14px;
+
+    @media (max-width: 425px) {
+      display: flex;
+      justify-content: center;
+      margin: 30px auto;
+    }
   }
 
   &__button {
@@ -106,8 +116,8 @@ body {
     padding-top: 23px;
 
     &:hover {
-      color: transparent;
       transition: all 0.2s ease;
+      cursor: text;
     }
 
     &::placeholder {
@@ -115,12 +125,16 @@ body {
       margin: 0 0;
 
       &:hover {
-        display: none;
+        color: transparent;
         transition: all 0.3s ease;
       }
 
       &:active {
         color: transparent;
+      }
+
+      @media (max-width: 768px) {
+        text-align: center;
       }
     }
   }
@@ -141,6 +155,7 @@ body {
     font-size: 22px;
     line-height: 34px;
     padding-left: 3.2%;
+    margin-bottom: 10px;
 
     @media (max-width: 1024px) {
       text-align: center;
@@ -158,7 +173,7 @@ body {
     justify-content: center;
   }
 
-  .menuFood__foodCard {
+  &__foodCard {
     padding:20px 7px;
 
     &:hover {
@@ -167,10 +182,11 @@ body {
       background: $color__10;
       border-radius: 5px;
       transition: all 0.3s ease;
+      cursor: pointer;
     }
   }
 
-  .menuFood__foodCardTitle {
+  &__foodCardTitle {
     font: $font__2;
     color: $color__5;
     padding-top: 13px;
@@ -183,11 +199,16 @@ body {
     }
   }
 
-  .menuFood__foodCardImage {
+  &__foodCardImage {
     padding: 0 3px;
+
+    &:hover {
+      border-radius: 25px;
+      transition: all 0.1s ease;
+    }
   }
 
-  .menuFood__foodCardDescription {
+  &__foodCardDescription {
     font: $font__3;
     color: $color__3;
     margin: 0;
@@ -195,7 +216,7 @@ body {
     padding-left: 4px;
   }
 
-  .menuFood__foodCardDelivery {
+  &__foodCardDelivery {
     font: $font__4;
     color: $color__5;
     padding-top: 3px;
@@ -203,8 +224,6 @@ body {
     padding-bottom: 7px;
   }
 }
-
-
 
 .footer {
   background: $color__6;
@@ -226,6 +245,21 @@ body {
     padding-bottom: 36px;
   }
 
+  &__logo {
+    @media (max-width: 425px) {
+      padding-left: 60px;
+    }
+
+    @media (max-width: 375px) {
+      padding-left: 40px;
+    }
+
+    @media (max-width: 320px) {
+      padding-left: 15px;
+    }
+  }
+
+
   &__links {
     font: $font__1;
     color: $color__1;
@@ -234,12 +268,14 @@ body {
 
     &:hover {
       text-decoration: underline;
+      cursor: pointer;
     }
 
     @media (max-width: 768px) {
       padding-left: 0px;
       font: $font__4;
     }
+    
   }
 
   &__menu {
@@ -251,8 +287,7 @@ body {
 
     @media (max-width: 768px) {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      flex-wrap: wrap;
     }
   }
 
@@ -261,6 +296,27 @@ body {
     padding-left: 32px;
     padding-top: 4px;
 
+    @media (max-width: 768px) {
+      width: 220px;
+      height: 160px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 425px) {
+      padding-left: 0;
+    }
+  }
+
+  &__selectLangSocialLink {
+    @media (max-width: 425px) {
+      padding-top: 11px;
+    }
+  }
+
+  &__selectLangSocial {
+    @media (max-width: 425px) {
+      padding-left: 75px;
+    }
   }
 
   select {
@@ -281,6 +337,10 @@ body {
       color: $color__8;
       padding-top: 32px;
       padding-bottom: 14px;
+
+      @media (max-width: 425px) {
+        text-align: center;
+      }
     }
 
     option {
@@ -309,13 +369,26 @@ body {
   &__aboutUberEats {
     display: flex;
     flex-direction: column; 
+    margin: 0 auto;
+
+    @media (max-width: 425px) {
+      width: 220px;
+      height: 160px;
+      text-align: center;
+      margin: 0 auto;
+    }
   }
 
   &__help {
     display: flex;
     flex-direction: column; 
-    padding-left: 128px;
+    margin: 0 auto;
 
+    @media (max-width: 425px) {
+      width: 220px;
+      height: 160px;
+      text-align: center;
+    }
   }
 
   &__app {
@@ -363,7 +436,7 @@ body {
   bottom: 20px;
   right: 10px;
   text-align: center; 
-  opacity: 0.5;
+  opacity: 0.9;
 
   .scrollToImage {
     padding: 26px 20px;
