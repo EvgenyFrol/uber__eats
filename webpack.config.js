@@ -16,7 +16,7 @@ module.exports = {
     poll: 1000
   },
   entry: {
-    "js/index": "./src/js/index.js"
+    "js/index.js": "./src/js/index.js"
   },
   output: {
     path: path.resolve(__dirname, "./dist/"),
@@ -65,7 +65,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.pug/,
+        test: /\.pug$/,
         loaders: [
           {
             loader: 'html-loader'},
@@ -87,10 +87,14 @@ module.exports = {
   plugins: [
     extractSass,
     new HtmlWebpackPlugin({
+      filename: "detal.html",
+      template: 'src/views/detal.pug',
+    }),
+    new HtmlWebpackPlugin({
       filename: "index.html",
       template: 'src/views/index.pug',
-
     }),
+
     new HtmlWebpackPugPlugin()
   ]
 }
