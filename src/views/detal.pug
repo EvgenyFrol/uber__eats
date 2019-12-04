@@ -12,31 +12,33 @@ html
     include ../components/header.pug
 
     section.banner
-      .banner__wrapper
-        h2.banner__title Трактир «Пушкин» 
-        .banner__descWrapper
-          p.banner__desc ₽₽₽ • Европейская
-          .banner__deliWrapper
-            p.banner__deli 40 - 50 минут
+      .banner__wrapper.baseContainer
+        .banner__card
+          h2.banner__title Трактир «Пушкин» 
+          .banner__descWrapper
+            p.banner__desc ₽₽₽ • Европейская
+            .banner__deliWrapper
+              p.banner__deli 40 - 50 минут
 
     section.menu 
-      .menu__wrapper
+      .menu__wrapper.baseContainer
         each item in menu
           a.menu__dishes(href="#")= item.type
 
     section.dishes
-      h3.dishes__typeTitle Закуски
-      .dishes__wrapper
-        each item in dishes
-          a.dishes__link(href="#")
-            .dishes__foodCard
-              .dishes__describe
-                h4.dishes__title= item.title
-                if item.desc
-                  p.dishes__desc= item.desc
-                p.dishes__price= item.price
-              .dishes__foodcardImage
-                img.dishes__image(src= item.image alt="dishes__img")
+      .dishes__wrapper.baseContainer
+        h3.dishes__typeTitle Закуски
+        .dishes__items
+          each item in dishes
+            a.dishes__link(href="#")
+              .dishes__foodCard
+                .dishes__describe
+                  h4.dishes__title= item.title
+                  if item.desc
+                    p.dishes__desc= item.desc
+                  p.dishes__price= item.price
+                .dishes__foodcardImage
+                  img.dishes__image(src= item.image alt="dishes__img")
 
     include ../components/footer.pug
 
